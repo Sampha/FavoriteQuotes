@@ -7,10 +7,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { Favorites } from '../pages/favorites/favorites';
 import { Quotes } from '../pages/quotes/quotes';
-import { Quote } from '../pages/quote/quote';
+import { QuotePage } from '../pages/quote/quote';
 import { Library } from '../pages/library/library';
 import { Settings } from '../pages/settings/settings';
 import { Tabs } from '../pages/tabs/tabs';
+import { QuotesService } from "../services/quotes";
 
 
 
@@ -20,7 +21,7 @@ import { Tabs } from '../pages/tabs/tabs';
     MyApp,
     Favorites,
     Quotes,
-    Quote,
+    QuotePage,
     Library,
     Settings,
     Tabs
@@ -34,7 +35,7 @@ import { Tabs } from '../pages/tabs/tabs';
     MyApp,
     Favorites,
     Quotes,
-    Quote,
+    QuotePage,
     Library,
     Settings,
     Tabs
@@ -42,7 +43,8 @@ import { Tabs } from '../pages/tabs/tabs';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+      QuotesService
   ]
 })
 export class AppModule {}
